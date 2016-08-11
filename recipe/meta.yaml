@@ -20,12 +20,12 @@ requirements:
   build:
     - python
     - setuptools
-    - argparse    # [py<27]
+    - argparse    # [py26]
     - pyyaml
 
   run:
     - python
-    - argparse    # [py<27]
+    - argparse    # [py26]
     - pyyaml
 
 test:
