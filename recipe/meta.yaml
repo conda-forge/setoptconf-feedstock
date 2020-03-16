@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1002
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -36,6 +36,7 @@ test:
 about:
   home: https://github.com/jayclassless/setoptconf
   license: MIT
+  license_file: LICENSE
   summary: 'A module for retrieving program settings from various sources in a consistant method.'
 
 extra:
