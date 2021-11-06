@@ -20,12 +20,10 @@ requirements:
   host:
     - python
     - setuptools
-    - argparse    # [py26]
     - pyyaml
 
   run:
     - python
-    - argparse    # [py26]
     - pyyaml
 
 test:
