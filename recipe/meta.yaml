@@ -20,7 +20,6 @@ requirements:
   host:
     - python
     - setuptools
-    - pyyaml
 
   run:
     - python
