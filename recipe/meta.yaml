@@ -14,15 +14,16 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   host:
-    - python
+    - python >=3
     - setuptools
 
   run:
-    - python
+    - python >=3
     - pyyaml
 
 test:
