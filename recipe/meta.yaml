@@ -9,24 +9,26 @@ package:
 source:
   {% set pypi_name = name.replace("_", "-") %}
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pyyaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - setoptconf
     - setoptconf.source
